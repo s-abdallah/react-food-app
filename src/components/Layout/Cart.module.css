@@ -1,0 +1,63 @@
+.table {
+    width: 100%;
+}
+
+.table h4 {
+    text-align: left;
+}
+
+.table thead th {
+    padding: 20px 0;
+}
+
+.table tfoot td {
+    padding: 10px 0;
+}
+
+.table tfoot h5 {
+    color: rgb(43, 39, 45);
+}
+
+.table tfoot tr:last-child {
+    text-align: right;
+}
+
+.table button.close {
+    min-width: 150px;
+    padding: 8px;
+}
+
+.table tbody td {
+    padding: 5px 0;
+    border-top: 1px rgb(243, 240, 240) solid;
+    border-bottom: 1px rgb(243, 240, 240) solid;
+}
+
+.table tbody h4 {
+    margin: 0 5px 0 0;
+}
+
+.table tbody h4,
+.table tbody h5 {
+    color: rgb(124, 120, 126);
+    display: inline-block;
+}
+
+.table tbody h5 {
+    color: rgb(154, 23, 36);
+    margin: 0 20px;
+}
+
+.table tbody h5 span {
+    border: 1px rgb(243, 240, 240) solid;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 5px 10px;
+    margin: 0 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.table tbody td:nth-of-type(2) {
+    text-align: right;
+}

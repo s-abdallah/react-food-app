@@ -1,0 +1,22 @@
+.card {
+    border-radius: 12px;
+    padding: calc(1vw + 5px);
+}
+
+.caption {
+    background: black;
+    min-width: 60vw;
+    width: 100%;
+    max-width: 80%;
+    position: absolute;
+    right: 0;
+    bottom: -10vw;
+    left: 0;
+    margin: auto;
+}
+
+.meals {
+    margin: calc(2vw + 150px) auto;
+    background-color: white;
+    width: 80%;
+}

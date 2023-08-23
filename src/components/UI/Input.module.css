@@ -1,0 +1,16 @@
+.amount {
+    width: 100%;
+}
+
+.amount input {
+    width: 40px;
+    height: 25px;
+    padding: 0 4px;
+    text-align: center;
+    border: 1px #d3c6c6 solid;
+}
+
+.amount label {
+    margin: 0 15px;
+    line-height: 25px;
+}

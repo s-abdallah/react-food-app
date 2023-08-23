@@ -1,0 +1,558 @@
+/* ***********************************************************
+## COLORS
+*********************************************************** */
+/* ***********************************************************
+## COLORS
+*********************************************************** */
+/* set up colors that will be used over and over again, in RGBA, A ommitted so that it can be set as needed but maintain base color */
+/* ******************************************************** */
+/* ***********************************************************
+## FONTS
+*********************************************************** */
+/* ***********************************************************
+## FONTS
+*********************************************************** */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&family=Oswald:wght@400;500;600&family=Roboto&family=Shantell+Sans:wght@500&display=swap");
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: grayscale;
+}
+
+/*@font-face {
+	font-family: entypo;
+	font-style: normal;
+	font-weight: normal;
+	src: url(http://weloveiconfonts.com/api/fonts/entypo/entypo.eot);
+	src: url(http://weloveiconfonts.com/api/fonts/entypo/entypo.eot?#iefix) format("eot"), url(http://weloveiconfonts.com/api/fonts/entypo/entypo.woff) format("woff"), url(http://weloveiconfonts.com/api/fonts/entypo/entypo.ttf) format("truetype"), url(http://weloveiconfonts.com/api/fonts/entypo/entypo.svg#entypo) format("svg");
+}*/
+/* ******************************************************** */
+/* ***********************************************************
+## FUNCTIONS
+*********************************************************** */
+/* The font will be at the preferred size on 1000 pixel wide viewports by default. */
+h1, h2, h3, h4, h5, button {
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+* {
+  font-size: 18px;
+  font-weight: 100;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #6882a0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+html.disable__scroll {
+  overflow-y: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+  background: #6882a0;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(104, 130, 160, 0.25);
+  -moz-box-shadow: inset 0 0 6px rgba(104, 130, 160, 0.25);
+  box-shadow: inset 0 0 6px rgba(104, 130, 160, 0.25);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: 255, 255, 255;
+  outline: 1px solid 255, 255, 255;
+}
+
+svg:focus {
+  outline: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(68, 74, 84, 0.85);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e9e9e9;
+}
+
+a, a span {
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  font-variant: initial;
+  font-family: "Oswald";
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-size: 14px;
+  color: #e9e9e9;
+}
+
+a {
+  -webkit-transition: all 0.45s;
+  -moz-transition: all 0.45s;
+  -ms-transition: all 0.45s;
+  -o-transition: all 0.45s;
+  transition: all 0.45s;
+}
+a:focus, a:hover {
+  color: #fed9b7;
+  outline: none;
+}
+a span {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5 {
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: initial;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-family: "Oswald";
+  font-weight: 600;
+  font-size: 40px;
+  color: #6882a0;
+}
+
+p, a, li, span, strong {
+  position: relative;
+  -webkit-transition: font-size 0.45s ease-in-out;
+  -moz-transition: font-size 0.45s ease-in-out;
+  -ms-transition: font-size 0.45s ease-in-out;
+  -o-transition: font-size 0.45s ease-in-out;
+  transition: font-size 0.45s ease-in-out;
+}
+
+h1 {
+  color: white;
+  line-height: 80px;
+  font-size: 38px;
+}
+@media screen and (max-width: 1480px) {
+  h1 {
+    font-size: calc(38px + -6 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  color: white;
+  line-height: 1.4;
+  font-size: 32px;
+}
+@media screen and (max-width: 1480px) {
+  h2 {
+    font-size: calc(32px + -6 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  color: black;
+  line-height: 1.2;
+  font-size: 28px;
+}
+@media screen and (max-width: 1480px) {
+  h3 {
+    font-size: calc(28px + -6 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  color: black;
+  font-weight: 600;
+  font-size: 22px;
+}
+@media screen and (max-width: 1480px) {
+  h4 {
+    font-size: calc(22px + -4 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+@media screen and (max-width: 1480px) {
+  h5 {
+    font-size: calc(20px + -4 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  h5 {
+    font-size: 16px;
+  }
+}
+
+p, a, li, span, strong {
+  font-size: 16px;
+  color: white;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  font-variant: initial;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  line-height: 1.75;
+  font-family: "Roboto";
+  object-fit: contain;
+}
+
+p, a, li, span, strong {
+  font-size: 16px;
+}
+@media screen and (max-width: 1480px) {
+  p, a, li, span, strong {
+    font-size: calc(16px + -3 * (100vw - 1480px) / -1120);
+  }
+}
+@media screen and (max-width: 360px) {
+  p, a, li, span, strong {
+    font-size: 13px;
+  }
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+strong {
+  color: #f07167;
+  font-weight: 600;
+}
+
+body {
+  background: #444a54;
+}
+
+header {
+  margin: 0 auto;
+  background: #f07167;
+  height: 80px;
+}
+header > div {
+  max-width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+header > div > div {
+  width: 50%;
+  min-width: 50%;
+}
+header button {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background: #00afb9;
+  margin: 20px 0;
+  float: right;
+}
+header button span {
+  display: inline-block;
+  margin: 0 5px;
+}
+header button span:first-child {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+header button span:first-child svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+footer {
+  height: auto;
+  background: #444a54;
+  text-align: center;
+}
+
+/* ***********************************************************
+## APP STYLE
+*********************************************************** */
+.App {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+}
+.hero figure {
+  max-height: 650px;
+  background-size: cover;
+  background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: block;
+  height: auto;
+  position: relative;
+}
+.hero figure:before, .hero figure:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+.hero figure span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+}
+.hero figure img {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -ms-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  display: block;
+  width: 100%;
+}
+.hero h2 {
+  margin-top: 20px;
+}
+.hero p {
+  margin: 20px auto;
+}
+
+.meals_list {
+  width: 94%;
+  margin: auto;
+}
+.meals_list p {
+  color: black;
+  margin: 5px 0;
+}
+.meals_list > li {
+  padding: 10px 0;
+  border-bottom: solid #e9e9e9 1px;
+}
+.meals_list > li:last-child {
+  border: none;
+}
+.meals_list > li ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.meals_list > li ul li:first-child {
+  width: 70%;
+  min-width: 70%;
+  text-align: left;
+}
+.meals_list > li ul li:last-child {
+  width: 30%;
+  min-width: 30%;
+  text-align: right;
+}
+
+fieldset {
+  margin: 10px 0;
+}
+fieldset label {
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: initial;
+  font-family: "Oswald";
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-weight: 600;
+  color: #00afb9;
+}
+fieldset input {
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: initial;
+  font-family: "Oswald";
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-weight: 400;
+  color: #6882a0;
+  font-size: 14px;
+}
+
+button {
+  background: #f07167;
+  padding: 2px 15px;
+  font-size: 16px;
+  color: white;
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: initial;
+  font-family: "Oswald";
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-weight: 600;
+}
+button.btn-cart {
+  min-width: 50px;
+  background: transparent;
+  margin: 5px;
+  padding: 0;
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: initial;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f07167;
+  font-weight: 600;
+  font-family: "Roboto";
+  border: solid #f07167 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+button.btn-cart:hover {
+  background: rgba(233, 233, 233, 0.2);
+  border: solid rgba(233, 233, 233, 0.75) 1px;
+}
+button.animated {
+  -webkit-animation: bump 300ms ease-out;
+  -moz-animation: bump 300ms ease-out;
+  -ms-animation: bump 300ms ease-out;
+  -o-animation: bump 300ms ease-out;
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
