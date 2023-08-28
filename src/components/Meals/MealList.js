@@ -6,13 +6,13 @@ const MealList = (props) => {
 
   const ctx = useContext(CartContext);
 
-  const cost = `$${props.cost.toFixed(2)}`;
+  const price = `$${props.price.toFixed(2)}`;
 
   const onAddToCart = amount => {
     ctx.addItem({
       id:props.id,
       title:props.title,
-      cost:props.cost,
+      price:props.price,
       amount: amount
     })
   }
@@ -23,7 +23,7 @@ const MealList = (props) => {
         <li>
           <h3> {props.title} </h3>
           <p> {props.excerpt} </p>
-          <strong> {cost} </strong>
+          <strong> {price} </strong>
         </li>
         <li>
           <MealAdd id={props.id} onAddToCart={onAddToCart} />

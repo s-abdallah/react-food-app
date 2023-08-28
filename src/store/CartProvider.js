@@ -5,7 +5,7 @@ const reducerCart = (state, action) => {
   switch (action.type) {
     case "ADD":
       let newitems = [];
-      const newTotal = state.total + action.item.cost * action.item.amount;
+      const newTotal = state.total + action.item.price * action.item.amount;
 
       // get the existing item index.
       const existingIndex = state.items.findIndex(
@@ -26,11 +26,11 @@ const reducerCart = (state, action) => {
       return { items: newitems, total: newTotal };
 
     case "DELETE":
-        // get index of the delete item.. 
+        // get index of the delete item..
         let deletedItems = [];
         const removedIndex = state.items.findIndex( item => item.id === action.id );
         const removedItem = state.items[removedIndex];
-        const newTotal2 = state.total - removedItem.cost;
+        const newTotal2 = state.total - removedItem.price;
         if ( removedItem.amount === 1 ) {
             deletedItems = [...state.items];
             deletedItems.splice(removedIndex, 1);
@@ -41,6 +41,10 @@ const reducerCart = (state, action) => {
         }
 
       return { items: deletedItems, total: newTotal2 }
+
+    case "CLEAR":
+        return { items: [], total: 0 };
+
     default:
       return { items: [], total: 0 };
   }
@@ -58,11 +62,16 @@ const CartProvider = (props) => {
     dispatchCart({ type: "DELETE", id: id });
   };
 
+  const clearItemsHandler = () => {
+    dispatchCart({ type: "CLEAR" });
+  }
+
   const cartValue = {
     items: cartState.items,
     total: cartState.total,
     addItem: addItemHandler,
     deleteItem: deleteItemHandler,
+    clearItems: clearItemsHandler,
   };
   return (
     <CartContext.Provider value={cartValue}>

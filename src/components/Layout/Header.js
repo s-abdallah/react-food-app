@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderCart from "./HeaderCart";
+import HeaderCart from "../Carts/HeaderCart";
 const Header = (props) => {
   return (
     <React.Fragment>

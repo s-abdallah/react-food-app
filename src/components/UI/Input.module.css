@@ -14,3 +14,45 @@
     margin: 0 15px;
     line-height: 25px;
 }
+
+.meal-require,
+.meal {
+    width: 100%;
+    margin: 15px auto;
+}
+.meal-require input,
+.meal input {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    text-align: left;
+    border: 1px #d3c6c6 solid;
+}
+
+.meal-require input,
+.meal label {
+    margin: 0 0;
+    line-height: 25px;
+    color: black;
+}
+
+.meal-require input {
+    background-color: rgba(200, 5, 5, 0.15);
+}
+.meal-require label {
+    color: rgba(200, 5, 5, 0.65);
+}
+
+
+.valid label {
+    color: gray;
+}
+
+.invalid label {
+    color: rgb(227, 30, 30);
+}
+
+.invalid input {
+    background-color: rgba(227, 30, 30, 0.315);
+    border-color: rgba(227, 30, 30, 0.315);
+}
